@@ -51,7 +51,7 @@ export function MovieDetails() {
   }, [movie.title]);
 
   return (
-    <main className="container">
+    <main className="container overflow-auto">
 
       <h5 className="text-danger py-2 mb-3 border-bottom">
         {movie.title}
