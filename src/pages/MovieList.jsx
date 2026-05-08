@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import {Card }from '../component'
 import { UseFetch } from '../useFetch/UseFetch'
+import { Link } from 'react-router-dom'
 
 export function MovieList({title ,apiPath}) {
 const {movie}=UseFetch(apiPath)
@@ -10,10 +11,10 @@ const {movie}=UseFetch(apiPath)
   return (
     <div className='container'>
       <main>
-    {title==="Your Guide to Great Movies" ?(
-      <div className='p-5 bg-body-tertiary border my-2 '><h3 className='text-info'>Welcome to Movie Vault</h3>
-      <p className='p-2 lead'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus magni deleniti asperiores minima, quas voluptate, incidunt rerum aliquid nisi commodi vitae quis atque dolor tenetur cum cupiditate ab, ipsam ipsa!</p>
-      <button className='btn btn-sm btn-outline-info'>Explore Now</button>
+    {title==="Trending Movies" ?(
+      <div className='p-5 bg-body-border my-2 '><h3 className='text-info'>Welcome to Movie Vault</h3>
+      <p className='p-2 lead'>Movie Vault is a modern movie discovery platform where users can explore trending films, search for their favorite movies, and view detailed information in a clean and responsive interface</p>
+      <Link to={'/tamil'} className='btn btn-sm btn-outline-info'>Explore Now</Link>
       </div>
     ):" "}
     <h5 className='text-danger border-bottom my-2'>{title}</h5>

@@ -11,7 +11,7 @@ export function Allrouter() {
     element={
       <MovieList
         title="Trending Movies"
-        apiPath="trending/movie/day"
+        apiPath="discover/movie?with_original_language=ta&primary_release_year=2025"
       />
     }
   />
@@ -21,7 +21,8 @@ export function Allrouter() {
     element={
       <MovieList
         title="Tamil Movies"
-        apiPath="discover/movie?with_original_language=ta&sort_by=vote_average.desc&vote_count.gte=100"
+         apiPath="discover/movie?with_original_language=ta&primary_release_year=2018"
+       
       />
     }
   />
@@ -31,7 +32,7 @@ export function Allrouter() {
     element={
       <MovieList
         title="Hollywood Movies"
-        apiPath="discover/movie?with_original_language=en&sort_by=vote_average.desc&vote_count.gte=100.desc"
+        apiPath="discover/movie?with_companies=420"
       />
     }
   />
@@ -41,7 +42,7 @@ export function Allrouter() {
     element={
       <MovieList
         title="Popular Movies"
-      apiPath="discover/movie?primary_release_year=2026&sort_by=popularity.desc"
+      apiPath="discover/movie?primary_release_year=2026&with_original_language=ta"
       />
     }
   />
